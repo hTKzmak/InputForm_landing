@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('./reset.css');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #FFF;
+  color: #170F49;
+}
+
+.container{
+  max-width: 1440px;
+  padding: 0 100px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 34px;
+}
+
+h2{
+  font-size: 24px;
+}
+
+p, input{
+  font-size: 18px;
+}
+
+p{
+  font-weight: 500
+}
+
+@media screen and (max-width: 909px){
+  .container{
+    padding: 0 20px;
+  }
+}
