@@ -8,7 +8,7 @@
             <Input :data="data" />
         </form>
     </div>
-    <Submit title="Submit" :getInfo="getInfo"/>
+    <Submit title="Submit" @getInfo="getInfo"/>
 </template>
   
 <script>

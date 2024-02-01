@@ -4,7 +4,12 @@
   
 <script>
 export default {
-    props: ['title', 'getInfo'],
+    props: ['title'],
+    methods: {
+        getInfo() {
+            this.$emit('getInfo')
+        }
+    }
 }
 </script>
   
@@ -27,7 +32,7 @@ button {
     cursor: pointer;
 }
 
-button:active{
+button:active {
     background: linear-gradient(180deg, #8d84f3 0%, #e44be7 100%);
 }
 </style>

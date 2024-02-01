@@ -1,7 +1,7 @@
 <template>
     <div class="input-form" v-for="info in data">
         <p>{{ info.title }}</p>
-        <input :type="info.type" :placeholder="info.placeholder">
+        <input :type="info.type" :placeholder="info.placeholder" v-model="info.model">
     </div>
 </template>
   

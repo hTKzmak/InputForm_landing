@@ -25,26 +25,20 @@ export default {
     data() {
         return {
             data: [
-                { title: 'Name', type: 'text', placeholder: 'Your Name' },
-                { title: 'Phone Number', type: 'tel', placeholder: '(123) 456 - 7890' },
-                { title: 'Email', type: 'email', placeholder: 'Your Mail ID' },
-                { title: 'Date', type: 'text', placeholder: 'dd - mm - yyyy' },
+                { model: '', title: 'Name', type: 'text', placeholder: 'Your Name' },
+                { model: '', title: 'Phone Number', type: 'tel', placeholder: '(123) 456 - 7890' },
+                { model: '', title: 'Email', type: 'email', placeholder: 'Your Mail ID' },
+                { model: '', title: 'Date', type: 'text', placeholder: 'dd - mm - yyyy' },
             ]
         }
     },
     methods: {
         getInfo() {
-            let inputItems = document.querySelectorAll('input');
-            let inputInfo = {}
-            for (let i = 0; i <= inputItems.length; i++) {
-                inputInfo = {
-                    Name: inputItems[0].value,
-                    Phone: inputItems[1].value,
-                    Email: inputItems[2].value,
-                    Date: inputItems[3].value
-                }
-            }
-            console.log(inputInfo)
+            let info = {};
+            this.data.forEach(item => {
+                info[item.title] = item.model;
+            });
+            console.log(info);
         }
     }
 }
